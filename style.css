@@ -1,0 +1,104 @@
+:root {
+    --bg: #0f172a;
+    --panel: #020617;
+    --text: #e5e7eb;
+    --border: #334155;
+}
+
+body.light {
+    --bg: #f8fafc;
+    --panel: #ffffff;
+    --text: #020617;
+    --border: #cbd5f5;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+header {
+    background: var(--panel);
+    padding: 20px;
+    text-align: center;
+}
+
+.toggle {
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: var(--panel);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+textarea,
+input {
+    width: 100%;
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-top: 10px;
+}
+
+textarea {
+    height: 180px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actions button {
+    margin-right: 8px;
+}
+
+pre {
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+/* LOG COLORS */
+.log-info { color: #38bdf8; }
+.log-warn { color: #facc15; }
+.log-error { color: #f87171; }
+.log-debug { color: #a78bfa; }
+.log-json { color: #34d399; }
+.log-stack { color: var(--text); }
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: var(--panel);
+}
+
+#logOutput {
+    display: block;
+    width: 100%;
+}
+

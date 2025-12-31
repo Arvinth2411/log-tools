@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Log Formatter & Timestamp Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Log Formatter with search, timestamp hover, copy, screenshot, and dark/light mode." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark">
+
+<header>
+    <h1>Log Formatter & Timestamp Converter</h1>
+    <p>Format logs • Search • Hover timestamps • Copy • Screenshot</p>
+    <button class="toggle" onclick="toggleTheme()">🌗 Toggle Theme</button>
+</header>
+
+<main>
+
+    <!-- LOG FORMATTER -->
+    <section>
+        <h2>🧾 Log Formatter</h2>
+
+        <textarea id="logInput" placeholder="Paste raw logs here..."></textarea>
+
+        <div class="actions">
+            <button onclick="formatLogs()">Format Logs</button>
+            <button onclick="copyFormattedLogs()">Copy</button>
+            <button onclick="screenshotLogs()">Screenshot</button>
+        </div>
+
+        <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search logs (ERROR, service name...)"
+                oninput="filterLogs()"
+        />
+
+        <pre id="logOutput"></pre>
+    </section>
+
+    <!-- TIMESTAMP CONVERTER -->
+    <section>
+        <h2>⏱ Timestamp Converter</h2>
+        <input
+                type="text"
+                id="timestampInput"
+                placeholder="1704896400 or 2025-01-10 14:30:00"
+        />
+        <button onclick="convertTimestamp()">Convert</button>
+        <p id="timestampOutput"></p>
+    </section>
+
+    <section>
+        <h2>🔐 Privacy</h2>
+        <p>All processing happens locally in your browser.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Log Tools</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
