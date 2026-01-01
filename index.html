@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Log Formatter & Timestamp Converter</title>
+
+    <title>Log Formatter Online | JSON Log Formatter & Timestamp Converter</title>
+
+    <meta name="description"
+          content="Free online log formatter to clean application logs, JSON logs, Kubernetes logs, and convert Unix timestamps to readable UTC & IST time. 100% browser-based." />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Log Formatter with search, timestamp hover, copy, screenshot, and dark/light mode." />
+
+    <!-- Google AdSense (add AFTER approval) -->
+    <!--
+    <script async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX"
+      crossorigin="anonymous"></script>
+    -->
+
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -12,15 +24,46 @@
 
 <header>
     <h1>Log Formatter & Timestamp Converter</h1>
-    <p>Format logs • Search • Hover timestamps • Copy • Screenshot</p>
+    <p>Clean application logs • Format JSON logs • Convert Unix timestamps</p>
+
     <button class="toggle" onclick="toggleTheme()">🌗 Toggle Theme</button>
 </header>
 
 <main>
 
-    <!-- LOG FORMATTER -->
+    <!-- SEO INTRO SECTION -->
     <section>
-        <h2>🧾 Log Formatter</h2>
+        <h2>Online Log Formatter & Timestamp Converter</h2>
+
+        <p>
+            This free online Log Formatter helps developers and DevOps engineers
+            convert raw, unstructured application logs into clean and readable format.
+            It supports application logs, JSON logs, Kubernetes logs, Linux logs,
+            and Java stack traces.
+        </p>
+
+        <p>
+            The built-in Timestamp Converter allows you to convert Unix timestamps
+            (in seconds or milliseconds) into human-readable UTC and IST time.
+            You can also hover over timestamps inside logs to instantly see
+            the actual date and time.
+        </p>
+
+        <p>
+            All processing happens locally in your browser.
+            Logs are never uploaded, stored, or shared.
+        </p>
+    </section>
+
+    <!-- LOG FORMATTER TOOL -->
+    <section>
+        <h2>🧾 Log Formatter Tool</h2>
+
+        <p>
+            Paste your raw logs below to format them into a clean and structured view.
+            This tool groups stack traces correctly and highlights ERROR, WARN,
+            INFO, and DEBUG logs for easier debugging.
+        </p>
 
         <textarea id="logInput" placeholder="Paste raw logs here..."></textarea>
 
@@ -33,7 +76,7 @@
         <input
                 type="text"
                 id="searchInput"
-                placeholder="🔍 Search logs (ERROR, service name...)"
+                placeholder="🔍 Search logs (ERROR, WARN, text...)"
                 oninput="filterLogs()"
         />
 
@@ -43,24 +86,55 @@
     <!-- TIMESTAMP CONVERTER -->
     <section>
         <h2>⏱ Timestamp Converter</h2>
+
+        <p>
+            Convert Unix timestamps or date strings into readable UTC and local time.
+            This is useful when analyzing logs from different servers and timezones.
+        </p>
+
         <input
                 type="text"
                 id="timestampInput"
-                placeholder="1704896400 or 2025-01-10 14:30:00"
+                placeholder="Example: 1704896400 or 2025-01-10 14:30:00"
         />
+
         <button onclick="convertTimestamp()">Convert</button>
+
         <p id="timestampOutput"></p>
     </section>
 
+    <!-- FAQ SECTION (ADSENSE LOVES THIS) -->
     <section>
-        <h2>🔐 Privacy</h2>
-        <p>All processing happens locally in your browser.</p>
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Is this log formatter free?</h3>
+        <p>Yes. This tool is completely free to use.</p>
+
+        <h3>Are my logs uploaded to any server?</h3>
+        <p>No. All logs are processed locally in your browser.</p>
+
+        <h3>What log formats are supported?</h3>
+        <p>
+            Application logs, JSON logs, Kubernetes logs,
+            Linux logs, and Java stack traces.
+        </p>
+
+        <h3>Can I use this tool for production logs?</h3>
+        <p>
+            Yes. Since nothing is uploaded, it is safe to use
+            for analyzing production logs.
+        </p>
     </section>
 
 </main>
 
 <footer>
-    <p>© 2025 Log Tools</p>
+    <p>
+        © 2025 Log Tools 
+<!--        <a href="about.html">About</a> |-->
+<!--        <a href="privacy.html">Privacy Policy</a> |-->
+<!--        <a href="contact.html">Contact</a>-->
+    </p>
 </footer>
 
 <script src="script.js"></script>
